@@ -25,7 +25,7 @@ func main() {
 	// engine.Any("/", WebRoot)
 	// engine.Run(":9205")
 
-	gin.SetMode(gin.ReleaseMode)
+	// gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 
 	// router.GET("/user/:name", func(c *gin.Context) {
@@ -150,7 +150,7 @@ func main() {
 		c.YAML(http.StatusOK, gin.H{"message": "hey", "status": http.StatusOK})
 	})
 
-	router.Run()
+	router.Run(":9026")
 }
 
 func startPage(c *gin.Context) {
